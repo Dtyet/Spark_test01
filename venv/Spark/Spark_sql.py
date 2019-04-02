@@ -9,5 +9,6 @@ def read():
     ''').show
 def write():
     return
+
 if __name__ == '__main__':
     read()
