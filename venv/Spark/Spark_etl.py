@@ -31,8 +31,6 @@ Zeppelin notebook).
 from pyspark.sql import Row
 from pyspark.sql.functions import col, concat_ws, lit
 from dependencies.spark import start_spark
-
-
 def main():
     """Main ETL script definition.
     :return: None
@@ -86,7 +84,6 @@ def transform_data(df, steps_per_floor_):
                (col('floor') * lit(steps_per_floor_)).alias('steps_to_desk')))
 
     return df_transformed
-
 
 def load_data(df):
     """Collect data locally and write to CSV.
